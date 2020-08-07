@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+
+  h1 {
+    margin: 40vh auto 0;
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border-bottom: 2px solid red;
+    position: relative;
+
+    .next {
+      color: orangered;
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.home {
+  h2 {
+    margin-bottom: 1em;
+  }
+  img {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+  }
+
+  //   background: url("../images/sunset_house.jpeg");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position-y: -50px;
+}
+
+.about {
+  div {
+    display: flex;
+    padding: auto 10%;
+
+    img {
+      margin: auto;
+      border: 2px solid black;
+      width: 25%;
+      height: 50vh;
+    }
+
+    .desc {
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+      width: 40%;
+    }
+  }
+}
+
+.work {
+  .projects {
+    display: flex;
+    .project {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid blue;
+      img {
+        border: 2px solid orange;
+        width: 5em;
+        height: 5em;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.contact {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 2em auto;
+    .field {
+      line-height: 2em;
+      margin-bottom: 1em;
+    }
+  }
+  .icons {
+    display: flex;
+    width: 25%;
+    margin: auto;
+    justify-content: space-around;
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+}
+
+.App h1 {
+  margin: 40vh auto 0;
+  font-size: 4em;
+}
+
+.App h2 {
+  font-size: 2em;
+}
+
+.App section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  border-bottom: 2px solid red;
+  position: relative;
+}
+
+.App section .next {
+  color: orangered;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5em;
+}
+
+.home h2 {
+  margin-bottom: 1em;
+}
+
+.home img {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}
+
+.about div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: auto 10%;
+}
+
+.about div img {
+  margin: auto;
+  border: 2px solid black;
+  width: 25%;
+  height: 50vh;
+}
+
+.about div .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+
+.work .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.work .projects .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid blue;
+}
+
+.work .projects .project img {
+  border: 2px solid orange;
+  width: 5em;
+  height: 5em;
+  margin: auto;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: 2em auto;
+}
+
+.contact form .field {
+  line-height: 2em;
+  margin-bottom: 1em;
+}
+
+.contact .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 0px;
+}
+/*# sourceMappingURL=App.css.map */
