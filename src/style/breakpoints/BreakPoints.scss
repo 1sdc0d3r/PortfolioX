@@ -1,0 +1,31 @@
+@mixin breakpoint($size) {
+  @if $size==xxs {
+    @media (max-width: 360px) {
+      @content;
+    }
+  } @else if $size==xs {
+    @media (min-width: 361px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $size==s {
+    @media (min-width: 361px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $size==m {
+    @media (min-width: 361px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $size==l {
+    @media (min-width: 361px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $size==xl {
+    @media (min-width: 361px) and (max-width: 480px) {
+      @content;
+    }
+  } @else if $size==xxl {
+    @media (min-width: 361px) and (max-width: 480px) {
+      @content;
+    }
+  }
+}

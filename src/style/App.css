@@ -1,14 +1,114 @@
 .App {
   text-align: center;
+  font-family: "Quantico", sans-serif;
 }
 
 .App h1 {
-  margin: 40vh auto 0;
-  font-size: 4em;
+  font-size: 5.5em;
 }
 
 .App h2 {
-  font-size: 2em;
+  font-size: 2.7em;
+}
+
+.App h3 {
+  font-size: 1.7em;
+}
+
+.App p {
+  font-size: 1.125em;
+}
+
+.App nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 2.5em;
+  z-index: 10;
+  background: #aaaaaa;
+}
+
+@media (max-width: 360px) {
+  .App nav {
+    background: red;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .App nav {
+    background: orange;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .App nav {
+    background: #ccc120;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .App nav {
+    background: green;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .App nav {
+    background: blue;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .App nav {
+    background: purple;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .App nav {
+    background: #3d3d3d;
+  }
+}
+
+.App nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  margin: auto;
+}
+
+.App nav div p {
+  font-family: "Lemonada";
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.App nav .progress-bar {
+  position: absolute;
+  height: 2.5em;
+  z-index: -1;
+}
+
+.App nav .progress-bar .bar-outline {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.App nav .progress-bar .bar-outline .bar {
+  height: 100%;
+  margin-left: 0;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 700;
+          transition-duration: 700;
+  background: grey;
 }
 
 .App section {
@@ -19,23 +119,32 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
-  border-bottom: 2px solid red;
   position: relative;
 }
 
 .App section .next {
+  font-family: "Lemonada";
   color: orangered;
   position: absolute;
   margin: auto;
-  bottom: 0;
+  bottom: 0.2em;
   left: 0;
   right: 0;
-  font-size: 1.5em;
+  font-size: 1.65em;
+  line-height: 0.9em;
+}
+
+.home {
+  height: 100vh;
+}
+
+.home h1 {
+  font-family: "Adistro";
+  margin: 40vh auto 0;
 }
 
 .home h2 {
-  margin-bottom: 1em;
+  margin-top: 0.1em;
 }
 
 .home img {
@@ -43,6 +152,34 @@
   z-index: -1;
   height: 100vh;
   width: 100%;
+}
+
+.home .bobber {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(49%, white), color-stop(49%, #ffdcdc), color-stop(51%, #b1b0b0), color-stop(51%, red));
+  background: linear-gradient(0deg, white, white 49%, #ffdcdc 49%, #b1b0b0 51%, red 51%);
+  position: absolute;
+  right: 3vh;
+  bottom: 3vh;
+}
+
+.home .bobber .bobber-top {
+  border: 0.125em solid white;
+  width: 0.5vw;
+  margin: -0.25em auto;
+  z-index: -1;
+}
+
+.home .bobber p {
+  margin-top: 1vw;
+  font-size: inherit;
+  overflow: hidden;
+}
+
+.about {
+  margin-bottom: 5em;
 }
 
 .about div {
@@ -71,10 +208,20 @@
   width: 40%;
 }
 
+.work {
+  margin-bottom: 6em;
+}
+
+.work h2 {
+  margin-bottom: 0;
+}
+
 .work .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .work .projects .project {
@@ -85,14 +232,36 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px solid blue;
+  width: 32%;
+}
+
+.work .projects .project h3 {
+  margin: 1em auto 0.8em;
 }
 
 .work .projects .project img {
-  border: 2px solid orange;
-  width: 5em;
-  height: 5em;
+  width: 16em;
+  height: 16em;
   margin: auto;
+}
+
+.work .projects .project p {
+  width: 80%;
+  margin: 1em auto 1.1em;
+  text-align: justify;
+}
+
+.work .projects .project a {
+  margin: 0 auto;
+}
+
+.work .projects .project a button {
+  font-size: 1.2em;
+  margin: 0 auto;
+  padding: 0.3em 0.5em;
+  color: white;
+  background-color: black;
+  border-radius: 0.5em;
 }
 
 .contact form {
@@ -116,10 +285,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
-  margin: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 0px;
+  width: 25%;
+  margin: 0.2em auto 3em;
 }
 /*# sourceMappingURL=App.css.map */
