@@ -4,6 +4,7 @@ import "./style/App.css";
 import Contact from "./components/Contact";
 import sunset from "./assets/images/sunset_red.jpeg";
 import tech from "./assets/images/aboutTech.svg";
+import game from "./assets/images/gol.png";
 
 function App() {
   const refHome = useRef(null);
@@ -87,7 +88,8 @@ function App() {
         <h1>Braden</h1>
         <Typing speed={65}>
           <h2 id="sub-header">Software Engineer</h2>
-          {/* <Typing.Backspace delay={500} speed={8} /> */}
+          {/* developer, engineer */}
+          {/* <Typing.Backspace delay={500} speed={8} count={9} /> */}
         </Typing>
         <div className="bobber" onClick={() => scrollToRef(refContact)}>
           <div className="bobber-top" />
@@ -157,10 +159,10 @@ const projects = [
   },
   {
     img: {
-      src: null,
+      src: game,
     },
-    alt: "null",
-    title: "Title",
+    alt: "Conway's Game of Life",
+    title: "Conway's Game",
     link: "https://www.bradenbell.tech",
     desc:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus, nulla voluptatem ut, exercitationem officia itaque at obcaecati eligendi laudantium animi?",

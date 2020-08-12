@@ -443,36 +443,6 @@
           flex-direction: column;
 }
 
-@media (max-width: 360px) {
-  .about div .desc .desc-left {
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-top: 1em;
-  }
-  .about div .desc .desc-left p {
-    width: 45%;
-    margin: 1em auto;
-  }
-}
-
-@media (min-width: 361px) and (max-width: 480px) {
-  .about div .desc .desc-left {
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-top: 1em;
-  }
-  .about div .desc .desc-left p {
-    width: 45%;
-    margin: 1em auto;
-  }
-}
-
 @media (min-width: 481px) and (max-width: 736px) {
   .about div .desc .desc-left {
     width: 100%;

@@ -176,6 +176,7 @@
   }
 
   .bobber {
+    //todo fix breaking text
     width: 5.5vw;
     height: 5.5vw;
     border-radius: 50%;
@@ -254,7 +255,7 @@
       }
       .desc-left {
         flex-direction: column;
-        @include breakpoint(xxs, xs, s) {
+        @include breakpoint(s) {
           width: 100%;
           flex-direction: row;
           margin-top: 1em;
