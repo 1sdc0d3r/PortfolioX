@@ -3,12 +3,6 @@
   src: local("Adistro"), url("../assets/Fonts/Adistro.ttf"), format("trueType");
 }
 
-/* @font-face {
-  font-family: "Adistro";
-  src: local("Adistro"), url("../assets/Fonts/Adistro.ttf"), format("ttf");
-} */
-
-/* trueType */
 
 body {
   margin: 0;

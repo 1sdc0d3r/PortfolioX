@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import * as emailjs from "emailjs-com";
 
@@ -8,6 +8,7 @@ export default function Contact() {
     email: "",
     subject: "",
     message: "",
+    antiSpam: null,
   });
 
   const onChangeHandler = (evt) => {
@@ -22,24 +23,31 @@ export default function Contact() {
 
     const templateParams = {
       reply_to: data.email,
-      subject: "Portfolio Contact",
-      to_name: "Braden",
+      subject: data.subject,
       from_name: data.name,
       message_subject: data.subject,
       message_html: data.message,
     };
 
-    emailjs.send(
-      "gmail",
-      "template_SswCjIcl1",
-      templateParams,
-      "user_vhx6Zrv5irvL2nLhnctr51"
-    );
+    if (!data.antiSpam)
+      emailjs.send(
+        "gmail"
+        // "template_SswCjIcl",
+        // templateParams
+        // "user_vhx6Zrv5irvL2nLhnctr5"
+      );
+
+    document.querySelector(".contact span").classList.add("message-sent");
+    setTimeout(() => {
+      document.querySelector(".contact span").classList.remove("message-sent");
+    }, 5000);
 
     setData({
       name: "",
       email: "",
+      subject: "",
       message: "",
+      antiSpam: "",
     });
   };
 
@@ -47,6 +55,7 @@ export default function Contact() {
     <section className="contact clicker">
       <h2>Contact</h2>
       {/* //todo FORM ACTION */}
+      <span>Message sent successfully</span>
       <form onSubmit={onSubmitHandler}>
         <input
           type="text"
@@ -56,6 +65,14 @@ export default function Contact() {
           value={data.name}
           onChange={onChangeHandler}
           className="field"
+        />
+        <input
+          type="text"
+          name="anti-spam"
+          id="anti-spam"
+          value={data.antiSpam}
+          onChange={onChangeHandler}
+          style={{ display: "None", position: "absolute" }}
         />
 
         <input
@@ -76,22 +93,20 @@ export default function Contact() {
           onChange={onChangeHandler}
           className="field"
         />
-
         <textarea
           name="message"
           placeholder="Message"
           id="message"
-          rows="6"
+          rows="5"
           value={data.message}
           onChange={onChangeHandler}
-          className="field"
+          className="field text"
         />
         <div className="actions">
-          <input type="submit" value="Send Message" />
+          <input type="submit" value="Send Message" id="submit-btn" />
         </div>
       </form>
 
-      {/* <h2>Find Me On</h2> */}
       <div className="icons">
         <SocialIcon
           target="_blank"

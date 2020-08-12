@@ -1,5 +1,5 @@
 @mixin breakpoint($sizes...) {
-  // @debug $sizes;
+  @debug $sizes;
   @for $i from 1 through length($sizes) {
     @if nth($sizes, $i) == xxs {
       @media (max-width: 360px) {

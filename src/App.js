@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Typing from "react-typing-animation";
 import "./style/App.css";
 import Contact from "./components/Contact";
@@ -45,9 +45,8 @@ function App() {
 
       if (home || about || work || contact) {
         removeActive();
-        if (home) {
-          document.getElementById("home").classList.add("active");
-        } else if (about) {
+        if (home) document.getElementById("home").classList.add("active");
+        else if (about) {
           document.getElementById("about").classList.add("active");
         } else if (work) {
           document.getElementById("work").classList.add("active");
@@ -103,16 +102,18 @@ function App() {
         <div>
           <img src="null" alt="null" />
           <div className="desc">
-            <p>
-              I am a avid fisherman with a passion to develop software. As
-              technology evolves, we must learn to evolve with it. This is
-              prominent for a successful future.
-            </p>
-            <p>
-              Change is inevitable, there will always be something that is going
-              to try to hold you back. When there is a new problem, I find a new
-              solution. This is the only way to progress.
-            </p>
+            <div className="desc-left">
+              <p>
+                I am a avid fisherman with a passion to develop software. As
+                technology evolves, we must learn to evolve with it. This is
+                prominent for a successful future.
+              </p>
+              <p>
+                Change is inevitable, there will always be something that is
+                going to try to hold you back. When there is a new problem, I
+                find a new solution. This is the only way to progress.
+              </p>
+            </div>
             <p>
               Today is a new day.
               <br /> I love being a source of color in a binary world!
@@ -138,6 +139,7 @@ function App() {
         </div>
       </section>
       <Contact />
+      <span>©2020 1sdc0d3r</span>
     </div>
   );
 }

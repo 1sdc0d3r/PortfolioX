@@ -7,18 +7,44 @@
 
   h1 {
     font-size: 5.5em;
+    @include breakpoint(xxs, xs) {
+      font-size: 5em;
+      // @debug (5.5em/1.1em);
+    }
+    @include breakpoint(xl, xxl) {
+      font-size: 5.5 * 1.2em;
+    }
   }
 
   h2 {
     font-size: 2.7em;
+    @include breakpoint(xxs, xs) {
+      font-size: 2.45em;
+    }
+    @include breakpoint(xl, xxl) {
+      font-size: 2.7 * 1.2em;
+    }
   }
 
   h3 {
     font-size: 1.7em;
+    @include breakpoint(xxs, xs) {
+      font-size: 1.55em;
+    }
+    @include breakpoint(xl, xxl) {
+      font-size: 1.7 * 1.2em;
+    }
   }
 
-  p {
+  p,
+  span {
     font-size: 1.125em;
+    @include breakpoint(xxs, xs) {
+      font-size: 1.025em;
+    }
+    @include breakpoint(xl, xxl) {
+      font-size: 1.125 * 1.2em;
+    }
   }
 
   nav {
@@ -29,14 +55,12 @@
     z-index: 10;
     background: rgb(170, 170, 170);
 
+    @include breakpoint(xxs, xs) {
+      display: none;
+    }
     @include breakpoint(xxs) {
       background: red;
     }
-    // @include breakpoint(xxs, xs, s) {
-    //   background: blue;
-    //   text-decoration: underline;
-    // }
-
     @include breakpoint(xs) {
       background: orange;
     }
@@ -51,6 +75,7 @@
     }
     @include breakpoint(xl) {
       background: purple;
+      //todo xl breakpoint not working??
     }
     @include breakpoint(xxl) {
       background: white;
@@ -59,19 +84,22 @@
     div {
       display: flex;
       justify-content: space-around;
-      width: 50%;
-      // height: 2.5em;
+      width: 60%;
       margin: auto;
-      // @include breakpoint(xs, m) {
-      //   color: green;
-      // }
-      // @include breakpoint(l) {
-      //   color: green;
-      // }
+
+      @include breakpoint(s) {
+        width: 100%;
+      }
 
       p {
         font-family: "Lemonada";
         font-size: 1.25em;
+        @include breakpoint(xxs, xs) {
+          font-size: 1.14em;
+        }
+        @include breakpoint(xl, xxl) {
+          font-size: 1.25 * 1.2em;
+        }
         margin: 0;
         cursor: pointer;
       }
@@ -81,52 +109,51 @@
       }
     }
 
-    .progress-bar {
-      position: absolute;
-      // display: flex;
-      // justify-content: space-around;
-      height: 2.5em;
-      z-index: -1;
+    // .progress-bar {
+    //   position: absolute;
+    //   // display: flex;
+    //   // justify-content: space-around;
+    //   height: 2.5em;
+    //   z-index: -1;
 
-      .bar-outline {
-        position: relative;
-        // display: flex;
-        height: 100%;
-        width: 100%;
-        margin: auto;
-        // background: purple;
+    //   .bar-outline {
+    //     position: relative;
+    //     // display: flex;
+    //     height: 100%;
+    //     width: 100%;
+    //     margin: auto;
+    //     // background: purple;
 
-        .bar {
-          height: 100%;
-          margin-left: 0;
-          // border: 1px solid grey;
-          // border-top-right-radius: 10%;
-          // border-bottom-right-radius: 10%;
-          transition: ease-in-out;
-          transition-duration: 700;
-          background: grey;
-        }
-      }
-    }
+    //     .bar {
+    //       height: 100%;
+    //       margin-left: 0;
+    //       // border: 1px solid grey;
+    //       // border-top-right-radius: 10%;
+    //       // border-bottom-right-radius: 10%;
+    //       transition: ease-in-out;
+    //       transition-duration: 700;
+    //       background: grey;
+    //     }
+    //   }
+    // }
   }
 
   section {
     display: flex;
     flex-direction: column;
-    // height: 100vh;
     position: relative;
 
-    .next {
-      font-family: "Lemonada";
-      color: orangered;
-      position: absolute;
-      margin: auto;
-      bottom: 0.2em;
-      left: 0;
-      right: 0;
-      font-size: 1.65em;
-      line-height: 0.9em;
-    }
+    // .next {
+    //   font-family: "Lemonada";
+    //   color: orangered;
+    //   position: absolute;
+    //   margin: auto;
+    //   bottom: 0.2em;
+    //   left: 0;
+    //   right: 0;
+    //   font-size: 1.65em;
+    //   line-height: 0.9em;
+    // }
   }
 }
 
@@ -149,8 +176,8 @@
   }
 
   .bobber {
-    width: 5vw;
-    height: 5vw;
+    width: 5.5vw;
+    height: 5.5vw;
     border-radius: 50%;
     background: linear-gradient(
       0deg,
@@ -161,12 +188,17 @@
       red 51%
     );
     position: absolute;
-    right: 3vh;
-    bottom: 3vh;
+    right: 3.5vh;
+    bottom: 3.5vh;
     cursor: pointer;
 
-    @include breakpoint(xxs, xs, s, m) {
+    @include breakpoint(xxs, xs, s) {
       display: none;
+    }
+
+    @include breakpoint(m) {
+      width: 7vw;
+      height: 7vw;
     }
 
     .bobber-top {
@@ -176,24 +208,40 @@
       z-index: -1;
     }
     p {
-      margin-top: 1vw;
-      font-size: inherit;
+      margin-top: 1.2vw;
       overflow: hidden;
+      @include breakpoint(m) {
+        margin-top: 1.5vw;
+      }
     }
   }
 }
 
 .about {
   margin-bottom: 5em;
+  @include breakpoint(xxs, xs) {
+    margin-bottom: 3.5em;
+  }
+
   div {
     display: flex;
     padding: auto 10%;
+
+    @include breakpoint(xxs, xs, s) {
+      flex-direction: column;
+      padding: auto 2%;
+    }
 
     img {
       margin: auto;
       border: 2px solid black;
       width: 25%;
       height: 50vh;
+      @include breakpoint(xxs, xs, s) {
+        height: 25vh;
+        width: 25vw;
+        min-width: 170px;
+      }
     }
 
     .desc {
@@ -201,12 +249,27 @@
       margin: auto;
       flex-direction: column;
       width: 40%;
+      @include breakpoint(xxs, xs, s) {
+        width: 90%;
+      }
+      .desc-left {
+        flex-direction: column;
+        @include breakpoint(xxs, xs, s) {
+          width: 100%;
+          flex-direction: row;
+          margin-top: 1em;
+          p {
+            width: 45%;
+            margin: 1em auto;
+          }
+        }
+      }
     }
   }
 }
 
 .work {
-  // margin-top: 6em;
+  margin-bottom: 2em;
   h2 {
     margin-bottom: 0;
   }
@@ -214,11 +277,19 @@
   .projects {
     display: flex;
     justify-content: space-around;
+    @include breakpoint(xxs, xs, s) {
+      flex-direction: column;
+    }
 
     .project {
       display: flex;
       flex-direction: column;
       width: 32%;
+      @include breakpoint(xxs, xs, s) {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 1em;
+      }
 
       h3 {
         margin: 1em auto 0.8em;
@@ -256,7 +327,21 @@
 
 .contact {
   h2 {
-    padding-top: 1em;
+    margin: 1em auto 0;
+  }
+  span {
+    visibility: hidden;
+    position: absolute;
+  }
+  .message-sent {
+    visibility: visible;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    transition: 700ms ease-in-out all;
+
+    background: lightgreen;
+    border: 2px solid green;
   }
   form {
     display: flex;
@@ -264,9 +349,35 @@
     width: 80%;
     margin: 2em auto;
 
+    @include breakpoint(xxs, xs, s) {
+      margin: 0 auto 1em;
+    }
+
     .field {
+      font-size: 1em;
       line-height: 2em;
       margin-bottom: 1em;
+      @include breakpoint(xxs, xs) {
+        font-size: 0.9em;
+      }
+    }
+
+    .text {
+      font-size: 1.5em;
+      @include breakpoint(xxs, xs) {
+        font-size: 1.36em;
+      }
+    }
+
+    #submit-btn {
+      font-size: 1em;
+      background: black;
+      color: white;
+      border: 2px outset black;
+      border-radius: 0.25em;
+      @include breakpoint(xxs, xs) {
+        font-size: 0.9em;
+      }
     }
   }
 
@@ -274,6 +385,9 @@
     display: flex;
     justify-content: space-around;
     width: 25%;
-    margin: 0.2em auto 3em;
+    margin: 0.2em auto 2em;
+    @include breakpoint(xxs, xs, s) {
+      width: 40%;
+    }
   }
 }

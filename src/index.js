@@ -4,7 +4,7 @@ import "./style/index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "./assets/Fonts/Adistro.ttf"
-import "./assets/Fonts/Adistro.otf"
+// import "./assets/Fonts/Adistro.otf"
 
 ReactDOM.render( <
   React.StrictMode >
