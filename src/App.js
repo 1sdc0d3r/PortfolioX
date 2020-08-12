@@ -18,33 +18,42 @@ function App() {
     refContact.current = document.querySelector(".contact");
 
     document.addEventListener("scroll", () => {
-      const home =
-        window.scrollY >= refHome.current.offsetTop &&
-        window.scrollY < refAbout.current.offsetTop;
+      // const activeNav = [
+      //   window.scrollY >= refHome.current.offsetTop &&
+      //     window.scrollY < refAbout.current.offsetTop,
+      //   window.scrollY >= refAbout.current.offsetTop &&
+      //     window.scrollY < refWork.current.offsetTop,
+      //   window.scrollY >= refWork.current.offsetTop &&
+      //     window.scrollY < refContact.current.offsetTop,
+      //   window.scrollY >= refContact.current.offsetTop,
+      // ];
+      const home = window.scrollY < refAbout.current.offsetTop;
       const about =
         window.scrollY >= refAbout.current.offsetTop &&
-        window.scrollY < refWork.current.offsetTop;
+        window.scrollY + 10 < refWork.current.offsetTop;
       const work =
-        window.scrollY >= refWork.current.offsetTop &&
-        window.scrollY < refContact.current.offsetTop;
-      const contact = window.scrollY >= refContact.current.offsetTop;
+        window.scrollY >= refWork.current.offsetTop - 10 &&
+        window.scrollY + 20 < refContact.current.offsetTop;
+      const contact = window.scrollY >= refContact.current.offsetTop - 20;
+
       const removeActive = () => {
         document.getElementById("home").classList.remove("active");
         document.getElementById("about").classList.remove("active");
         document.getElementById("work").classList.remove("active");
         document.getElementById("contact").classList.remove("active");
       };
-      if (home) {
+
+      if (home || about || work || contact) {
         removeActive();
-        document.getElementById("home").classList.add("active");
-      } else if (about) {
-        removeActive();
-        document.getElementById("about").classList.add("active");
-      } else if (work) {
-        removeActive();
-        document.getElementById("work").classList.add("active");
-      } else if (contact) {
-        document.getElementById("contact").classList.add("active");
+        if (home) {
+          document.getElementById("home").classList.add("active");
+        } else if (about) {
+          document.getElementById("about").classList.add("active");
+        } else if (work) {
+          document.getElementById("work").classList.add("active");
+        } else if (contact) {
+          document.getElementById("contact").classList.add("active");
+        }
       }
     });
     return () => {
@@ -52,8 +61,9 @@ function App() {
     };
   }, []);
 
-  const scrollToRef = (ref) =>
+  const scrollToRef = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="App">

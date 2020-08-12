@@ -47,7 +47,7 @@
       background: green;
     }
     @include breakpoint(l) {
-      background: blue;
+      background: lightblue;
     }
     @include breakpoint(xl) {
       background: purple;
@@ -165,9 +165,9 @@
     bottom: 3vh;
     cursor: pointer;
 
-    // @include breakpoint(xxs, xs, s, m) {
-    //   display: none;
-    // }
+    @include breakpoint(xxs, xs, s, m) {
+      display: none;
+    }
 
     .bobber-top {
       border: 0.125em solid white;
@@ -206,7 +206,7 @@
 }
 
 .work {
-  margin-bottom: 6em;
+  // margin-top: 6em;
   h2 {
     margin-bottom: 0;
   }
@@ -255,6 +255,9 @@
 }
 
 .contact {
+  h2 {
+    padding-top: 1em;
+  }
   form {
     display: flex;
     flex-direction: column;

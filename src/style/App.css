@@ -56,7 +56,7 @@
 
 @media (min-width: 981px) and (max-width: 1280px) {
   .App nav {
-    background: blue;
+    background: lightblue;
   }
 }
 
@@ -171,6 +171,30 @@
   cursor: pointer;
 }
 
+@media (max-width: 360px) {
+  .home .bobber {
+    display: none;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .home .bobber {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 736px) {
+  .home .bobber {
+    display: none;
+  }
+}
+
+@media (min-width: 737px) and (max-width: 980px) {
+  .home .bobber {
+    display: none;
+  }
+}
+
 .home .bobber .bobber-top {
   border: 0.125em solid white;
   width: 0.5vw;
@@ -212,10 +236,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40%;
-}
-
-.work {
-  margin-bottom: 6em;
 }
 
 .work h2 {
@@ -268,6 +288,10 @@
   color: white;
   background-color: black;
   border-radius: 0.5em;
+}
+
+.contact h2 {
+  padding-top: 1em;
 }
 
 .contact form {
