@@ -32,6 +32,11 @@
     @include breakpoint(xxs) {
       background: red;
     }
+    // @include breakpoint(xxs, xs, s) {
+    //   background: blue;
+    //   text-decoration: underline;
+    // }
+
     @include breakpoint(xs) {
       background: orange;
     }
@@ -48,7 +53,7 @@
       background: purple;
     }
     @include breakpoint(xxl) {
-      background: rgb(61, 61, 61);
+      background: white;
     }
 
     div {
@@ -57,10 +62,22 @@
       width: 50%;
       // height: 2.5em;
       margin: auto;
+      // @include breakpoint(xs, m) {
+      //   color: green;
+      // }
+      // @include breakpoint(l) {
+      //   color: green;
+      // }
+
       p {
         font-family: "Lemonada";
         font-size: 1.25em;
         margin: 0;
+        cursor: pointer;
+      }
+
+      .active {
+        color: grey;
       }
     }
 
@@ -146,8 +163,9 @@
     position: absolute;
     right: 3vh;
     bottom: 3vh;
+    cursor: pointer;
 
-    // @include breakpoint(m) {
+    // @include breakpoint(xxs, xs, s, m) {
     //   display: none;
     // }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Typing from "react-typing-animation";
 import "./style/App.css";
 import Contact from "./components/Contact";
@@ -6,14 +6,71 @@ import sunset from "./assets/images/sunset_red.jpeg";
 import tech from "./assets/images/aboutTech.svg";
 
 function App() {
+  const refHome = useRef(null);
+  const refAbout = useRef(null);
+  const refWork = useRef(null);
+  const refContact = useRef(null);
+
+  useEffect(() => {
+    refHome.current = document.querySelector(".home");
+    refAbout.current = document.querySelector(".about");
+    refWork.current = document.querySelector(".work");
+    refContact.current = document.querySelector(".contact");
+
+    document.addEventListener("scroll", () => {
+      const home =
+        window.scrollY >= refHome.current.offsetTop &&
+        window.scrollY < refAbout.current.offsetTop;
+      const about =
+        window.scrollY >= refAbout.current.offsetTop &&
+        window.scrollY < refWork.current.offsetTop;
+      const work =
+        window.scrollY >= refWork.current.offsetTop &&
+        window.scrollY < refContact.current.offsetTop;
+      const contact = window.scrollY >= refContact.current.offsetTop;
+      const removeActive = () => {
+        document.getElementById("home").classList.remove("active");
+        document.getElementById("about").classList.remove("active");
+        document.getElementById("work").classList.remove("active");
+        document.getElementById("contact").classList.remove("active");
+      };
+      if (home) {
+        removeActive();
+        document.getElementById("home").classList.add("active");
+      } else if (about) {
+        removeActive();
+        document.getElementById("about").classList.add("active");
+      } else if (work) {
+        removeActive();
+        document.getElementById("work").classList.add("active");
+      } else if (contact) {
+        document.getElementById("contact").classList.add("active");
+      }
+    });
+    return () => {
+      document.removeEventListener("scroll");
+    };
+  }, []);
+
+  const scrollToRef = (ref) =>
+    ref.current.scrollIntoView({ behavior: "smooth" });
+
   return (
     <div className="App">
       <nav>
         <div>
-          <p>Home</p>
-          <p>About</p>
-          <p>Work</p>
-          <p>Contact</p>
+          <p id="home" className="active" onClick={() => scrollToRef(refHome)}>
+            Home
+          </p>
+          <p id="about" onClick={() => scrollToRef(refAbout)}>
+            About
+          </p>
+          <p id="work" onClick={() => scrollToRef(refWork)}>
+            Work
+          </p>
+          <p id="contact" onClick={() => scrollToRef(refContact)}>
+            Contact
+          </p>
         </div>
       </nav>
       <section className="home">
@@ -23,7 +80,7 @@ function App() {
           <h2 id="sub-header">Software Engineer</h2>
           {/* <Typing.Backspace delay={500} speed={8} /> */}
         </Typing>
-        <div className="bobber">
+        <div className="bobber" onClick={() => scrollToRef(refContact)}>
           <div className="bobber-top" />
           <p>
             Drop a <br />
@@ -69,9 +126,6 @@ function App() {
             );
           })}
         </div>
-        {/* <p className="next">
-          Contact <br />v
-        </p> */}
       </section>
       <Contact />
     </div>
