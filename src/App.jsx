@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import Typing from "react-typing-animation";
 import "./style/App.css";
 import Contact from "./components/Contact";
-import sunset from "./assets/images/sunset_red.jpeg";
+import sunset from "./assets/images/sunset_red.jpg";
 import tech from "./assets/images/aboutTech.svg";
-import game from "./assets/images/gol.png";
+import fish from "./assets/images/fish.png";
 
 function App() {
   const refHome = useRef(null);
@@ -130,7 +130,11 @@ function App() {
             return (
               <div className="project" key={e.title}>
                 <h3>{e.title}</h3>
-                <img src={e.img.src} alt={e.img.alt} />
+                <img
+                  src={e.img.src}
+                  alt={e.img.alt}
+                  className={`project${e.id}`}
+                />
                 <p>{e.desc}</p>
                 <a href={e.link} target="_blank" rel="noopener noreferrer">
                   <button>Visit & Explore</button>
@@ -148,6 +152,7 @@ function App() {
 
 const projects = [
   {
+    id: 1,
     img: {
       src: tech,
     },
@@ -158,16 +163,18 @@ const projects = [
       "Sorting Hat is a quick quiz application that suggests students the top ranking tracks that they can further look into based on their interests and what they find most important in a job.",
   },
   {
+    id: 2,
     img: {
-      src: game,
+      src: fish,
     },
     alt: "Conway's Game of Life",
     title: "Conway's Game",
-    link: "https://www.bradenbell.tech",
+    link: "https://conways-game-of-life.bradenbell.vercel.app",
     desc:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus, nulla voluptatem ut, exercitationem officia itaque at obcaecati eligendi laudantium animi?",
+      "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.",
   },
   {
+    id: 3,
     img: {
       src: "null",
     },

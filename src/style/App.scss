@@ -54,32 +54,33 @@
     height: 2.5em;
     z-index: 10;
     background: rgb(170, 170, 170);
+    background: lightblue;
 
-    @include breakpoint(xxs, xs) {
-      display: none;
-    }
-    @include breakpoint(xxs) {
-      background: red;
-    }
-    @include breakpoint(xs) {
-      background: orange;
-    }
-    @include breakpoint(s) {
-      background: rgb(204, 193, 32);
-    }
-    @include breakpoint(m) {
-      background: green;
-    }
-    @include breakpoint(l) {
-      background: lightblue;
-    }
-    @include breakpoint(xl) {
-      background: purple;
-      //todo xl breakpoint not working??
-    }
-    @include breakpoint(xxl) {
-      background: white;
-    }
+    // @include breakpoint(xxs, xs) {
+    //   display: none;
+    // }
+    // @include breakpoint(xxs) {
+    //   background: red;
+    // }
+    // @include breakpoint(xs) {
+    //   background: orange;
+    // }
+    // @include breakpoint(s) {
+    //   background: rgb(204, 193, 32);
+    // }
+    // @include breakpoint(m) {
+    //   background: green;
+    // }
+    // @include breakpoint(l) {
+    //   background: lightblue;
+    // }
+    // @include breakpoint(xl) {
+    //   background: purple;
+    //   //todo xl breakpoint not working??
+    // }
+    // @include breakpoint(xxl) {
+    //   background: white;
+    // }
 
     div {
       display: flex;
@@ -105,7 +106,8 @@
       }
 
       .active {
-        color: grey;
+        color: rgb(124, 124, 124);
+        // color: rgb(58, 147, 177);
       }
     }
 
@@ -278,6 +280,7 @@
   .projects {
     display: flex;
     justify-content: space-around;
+
     @include breakpoint(xxs, xs, s) {
       flex-direction: column;
     }
@@ -286,6 +289,7 @@
       display: flex;
       flex-direction: column;
       width: 32%;
+
       @include breakpoint(xxs, xs, s) {
         width: 90%;
         margin: auto;
@@ -294,14 +298,15 @@
 
       h3 {
         margin: 1em auto 0.8em;
-        // margin-bottom: .8em;
       }
 
       img {
-        // border: 2px solid orange;
         width: 16em;
         height: 16em;
         margin: auto;
+      }
+      .project2 {
+        height: 12em;
       }
 
       p {
@@ -358,6 +363,7 @@
       font-size: 1em;
       line-height: 2em;
       margin-bottom: 1em;
+
       @include breakpoint(xxs, xs) {
         font-size: 0.9em;
       }
@@ -365,6 +371,7 @@
 
     .text {
       font-size: 1.5em;
+
       @include breakpoint(xxs, xs) {
         font-size: 1.36em;
       }

@@ -120,7 +120,7 @@ export default function Contact() {
         />
         <SocialIcon
           target="_blank"
-          url="https://www.linkedin.com/in/braden-bell-73b168165/"
+          url="https://www.linkedin.com/in/braden-bell"
           id="linkedin"
         />
       </div>

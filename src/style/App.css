@@ -129,60 +129,7 @@
   height: 2.5em;
   z-index: 10;
   background: #aaaaaa;
-}
-
-@media (max-width: 360px) {
-  .App nav {
-    display: none;
-  }
-}
-
-@media (min-width: 361px) and (max-width: 480px) {
-  .App nav {
-    display: none;
-  }
-}
-
-@media (max-width: 360px) {
-  .App nav {
-    background: red;
-  }
-}
-
-@media (min-width: 361px) and (max-width: 480px) {
-  .App nav {
-    background: orange;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 736px) {
-  .App nav {
-    background: #ccc120;
-  }
-}
-
-@media (min-width: 737px) and (max-width: 980px) {
-  .App nav {
-    background: green;
-  }
-}
-
-@media (min-width: 981px) and (max-width: 1280px) {
-  .App nav {
-    background: lightblue;
-  }
-}
-
-@media (min-width: 1281) and (max-width: 1680px) {
-  .App nav {
-    background: purple;
-  }
-}
-
-@media (min-width: 1681px) {
-  .App nav {
-    background: white;
-  }
+  background: lightblue;
 }
 
 .App nav div {
@@ -233,7 +180,7 @@
 }
 
 .App nav div .active {
-  color: grey;
+  color: #7c7c7c;
 }
 
 .App section {
@@ -544,6 +491,10 @@
   width: 16em;
   height: 16em;
   margin: auto;
+}
+
+.work .projects .project .project2 {
+  height: 12em;
 }
 
 .work .projects .project p {
