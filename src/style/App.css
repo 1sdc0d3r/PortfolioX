@@ -1,10 +1,14 @@
 .App {
   text-align: center;
-  font-family: "Quantico", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  background-color: #e76f2f;
 }
 
 .App h1 {
   font-size: 5.5em;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  letter-spacing: 0.03em;
 }
 
 @media (max-width: 360px) {
@@ -19,7 +23,7 @@
   }
 }
 
-@media (min-width: 1281) and (max-width: 1680px) {
+@media (min-width: 1281px) and (max-width: 1680px) {
   .App h1 {
     font-size: 6.6em;
   }
@@ -47,7 +51,7 @@
   }
 }
 
-@media (min-width: 1281) and (max-width: 1680px) {
+@media (min-width: 1281px) and (max-width: 1680px) {
   .App h2 {
     font-size: 3.24em;
   }
@@ -75,7 +79,7 @@
   }
 }
 
-@media (min-width: 1281) and (max-width: 1680px) {
+@media (min-width: 1281px) and (max-width: 1680px) {
   .App h3 {
     font-size: 2.04em;
   }
@@ -106,7 +110,7 @@
   }
 }
 
-@media (min-width: 1281) and (max-width: 1680px) {
+@media (min-width: 1281px) and (max-width: 1680px) {
   .App p,
   .App span {
     font-size: 1.35em;
@@ -149,7 +153,7 @@
 }
 
 .App nav div p {
-  font-family: "Lemonada";
+  font-family: "Roboto", sans-serif;
   font-size: 1.25em;
   margin: 0;
   cursor: pointer;
@@ -167,7 +171,7 @@
   }
 }
 
-@media (min-width: 1281) and (max-width: 1680px) {
+@media (min-width: 1281px) and (max-width: 1680px) {
   .App nav div p {
     font-size: 1.5em;
   }
@@ -196,22 +200,16 @@
 
 .home {
   height: 100vh;
+  background-image: url("../assets/images/sunset_red.jpg");
+  background-size: 100% 100vh;
 }
 
 .home h1 {
-  font-family: "Adistro";
   margin: 40vh auto 0;
 }
 
 .home h2 {
   margin-top: 0.1em;
-}
-
-.home img {
-  position: absolute;
-  z-index: -1;
-  height: 100vh;
-  width: 100%;
 }
 
 .home .bobber {
@@ -270,7 +268,9 @@
 }
 
 .about {
-  margin-bottom: 5em;
+  padding-bottom: 5em;
+  background: #e76f2f;
+  background: #f4b045;
 }
 
 @media (max-width: 360px) {
@@ -406,7 +406,8 @@
 }
 
 .work {
-  margin-bottom: 2em;
+  padding-bottom: 2em;
+  background: #c74926;
 }
 
 .work h2 {
@@ -457,6 +458,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 32%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 360px) {
@@ -490,16 +494,17 @@
 .work .projects .project img {
   width: 16em;
   height: 16em;
-  margin: auto;
+  margin: 0 auto 0.5em;
 }
 
 .work .projects .project .project2 {
   height: 12em;
+  margin: 2em auto;
 }
 
 .work .projects .project p {
   width: 80%;
-  margin: 1em auto 1.1em;
+  margin: 0em auto 1.1em;
   text-align: justify;
 }
 
@@ -508,12 +513,18 @@
 }
 
 .work .projects .project a button {
+  font-family: "Roboto", sans-serif;
   font-size: 1.2em;
   margin: 0 auto;
   padding: 0.3em 0.5em;
   color: white;
   background-color: black;
   border-radius: 0.5em;
+}
+
+.contact {
+  background-color: #f4b045;
+  background-color: #e76f2f;
 }
 
 .contact h2 {
@@ -601,6 +612,7 @@
 }
 
 .contact form #submit-btn {
+  font-family: "Roboto", sans-serif;
   font-size: 1em;
   background: black;
   color: white;
@@ -627,7 +639,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 25%;
-  margin: 0.2em auto 2em;
+  margin: 0.2em auto 1.8em;
 }
 
 @media (max-width: 360px) {

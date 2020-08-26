@@ -84,9 +84,8 @@ function App() {
         </div>
       </nav>
       <section className="home">
-        <img src={sunset} alt="sunset w/ house" />
         <h1>Braden</h1>
-        <Typing speed={65}>
+        <Typing speed={55} startDelay={700}>
           <h2 id="sub-header">Software Engineer</h2>
           {/* developer, engineer */}
           {/* <Typing.Backspace delay={500} speed={8} count={9} /> */}
@@ -106,7 +105,7 @@ function App() {
           <div className="desc">
             <div className="desc-left">
               <p>
-                I am a avid fisherman with a passion to develop software. As
+                I am an avid fisherman with a passion to develop software. As
                 technology evolves, we must learn to evolve with it. This is
                 prominent for a successful future.
               </p>
@@ -145,7 +144,7 @@ function App() {
         </div>
       </section>
       <Contact />
-      <span>©2020 1sdc0d3r</span>
+      <span id="copy">©2020 1sdc0d3r</span>
     </div>
   );
 }
@@ -160,7 +159,7 @@ const projects = [
     title: "Tech Sorting Hat",
     link: "https://www.sortinghat.tech/",
     desc:
-      "Sorting Hat is a quick quiz application that suggests students the top ranking tracks that they can further look into based on their interests and what they find most important in a job.",
+      "Sorting Hat is a quick quiz application that suggests students the top ranking tracks that they can further look into based on their interests and what they find most important in a job. Testing was done with Cypress and Jest.",
   },
   {
     id: 2,
