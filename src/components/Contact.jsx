@@ -112,16 +112,19 @@ export default function Contact() {
           target="_blank"
           url="https://github.com/1sdc0d3r"
           id="github"
+          bgColor="#312a26"
         />
         <SocialIcon
           target="_blank"
           url="https://twitter.com/BradenBell19"
           id="twitter"
+          bgColor="#312a26"
         />
         <SocialIcon
           target="_blank"
           url="https://www.linkedin.com/in/braden-bell"
           id="linkedin"
+          bgColor="#312a26"
         />
       </div>
     </section>

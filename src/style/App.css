@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: "Roboto Mono", monospace;
-  background-color: #e76f2f;
+  background-color: #c74926;
 }
 
 .App h1 {
@@ -269,8 +269,8 @@
 
 .about {
   padding-bottom: 5em;
-  background: #e76f2f;
-  background: #f4b045;
+  background: #312a26;
+  color: white;
 }
 
 @media (max-width: 360px) {
@@ -407,7 +407,7 @@
 
 .work {
   padding-bottom: 2em;
-  background: #c74926;
+  background-color: #e76f2f;
 }
 
 .work h2 {
@@ -523,8 +523,7 @@
 }
 
 .contact {
-  background-color: #f4b045;
-  background-color: #e76f2f;
+  background-color: #c74926;
 }
 
 .contact h2 {
@@ -581,6 +580,7 @@
   font-size: 1em;
   line-height: 2em;
   margin-bottom: 1em;
+  background: #e6c9c1;
 }
 
 @media (max-width: 360px) {

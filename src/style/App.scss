@@ -4,7 +4,7 @@
   text-align: center;
   font-family: "Roboto Mono", monospace;
   //todo backup font?
-  background-color: #e76f2f;
+  background-color: #c74926;
 
   h1 {
     font-size: 5.5em;
@@ -181,8 +181,10 @@
 
 .about {
   padding-bottom: 5em;
-  background: #e76f2f;
-  background: #f4b045;
+  background: #312a26;
+  color: white;
+  // background: white;
+  // background: #d8c6a7;
   @include breakpoint(xxs, xs) {
     margin-bottom: 3.5em;
   }
@@ -234,7 +236,7 @@
 
 .work {
   padding-bottom: 2em;
-  background: #c74926;
+  background-color: #e76f2f;
   h2 {
     margin-bottom: 0;
   }
@@ -297,8 +299,7 @@
 }
 
 .contact {
-  background-color: #f4b045;
-  background-color: #e76f2f;
+  background-color: #c74926;
   h2 {
     margin: 1em auto 0;
   }
@@ -315,13 +316,13 @@
 
     background: lightgreen;
     border: 2px solid green;
+    //todo check errors/not empty
   }
   form {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 2em auto;
-
     @include breakpoint(xxs, xs, s) {
       margin: 0 auto 1em;
     }
@@ -330,6 +331,7 @@
       font-size: 1em;
       line-height: 2em;
       margin-bottom: 1em;
+      background: #e6c9c1;
 
       @include breakpoint(xxs, xs) {
         font-size: 0.9em;
@@ -362,6 +364,7 @@
     justify-content: space-around;
     width: 25%;
     margin: 0.2em auto 1.8em;
+
     @include breakpoint(xxs, xs, s) {
       width: 40%;
     }
