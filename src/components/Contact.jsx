@@ -31,13 +31,6 @@ export default function Contact() {
 
     if (!data.antiSpam) {
       emailjs.send(
-        "gmail"
-        // "template_SswCjIcl",
-        // templateParams
-        // "user_vhx6Zrv5irvL2nLhnctr5"
-      );
-    } else {
-      emailjs.send(
         "gmail",
         "template_SswCjIcl",
         templateParams,
