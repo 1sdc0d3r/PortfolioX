@@ -29,13 +29,21 @@ export default function Contact() {
       message_html: data.message,
     };
 
-    if (!data.antiSpam)
+    if (!data.antiSpam) {
       emailjs.send(
         "gmail"
         // "template_SswCjIcl",
         // templateParams
         // "user_vhx6Zrv5irvL2nLhnctr5"
       );
+    } else {
+      emailjs.send(
+        "gmail",
+        "template_SswCjIcl",
+        templateParams,
+        "user_vhx6Zrv5irvL2nLhnctr5"
+      );
+    }
 
     document.querySelector(".contact span").classList.add("message-sent");
     setTimeout(() => {
