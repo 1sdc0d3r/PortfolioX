@@ -48,7 +48,7 @@ export default function Contact() {
       email: "",
       subject: "",
       message: "",
-      antiSpam: "",
+      antiSpam: null,
     });
   };
 
