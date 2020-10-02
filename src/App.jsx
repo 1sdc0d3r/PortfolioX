@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import Typing from "react-typing-animation";
 import "./style/App.css";
 import Contact from "./components/Contact";
-import sunset from "./assets/images/sunset_red.jpg";
 import tech from "./assets/images/aboutTech.svg";
 import fish from "./assets/images/fish.png";
+import Braden from "./assets/images/Braden.png";
 
 function App() {
   const refHome = useRef(null);
@@ -87,21 +87,22 @@ function App() {
         <h1>Braden</h1>
         <Typing speed={55} startDelay={700}>
           <h2 id="sub-header">Software Engineer</h2>
-          {/* developer, engineer */}
           {/* <Typing.Backspace delay={500} speed={8} count={9} /> */}
+          {/* developer, engineer */}
         </Typing>
         <div className="bobber" onClick={() => scrollToRef(refContact)}>
-          <div className="bobber-top" />
+          <p className="bobber-top" />
+          {/* todo fix breaking here */}
           <p>
-            Drop a <br />
-            line
+            Drop a<br />
+            Line
           </p>
         </div>
       </section>
       <section className="about">
         <h2>About</h2>
         <div>
-          <img src="null" alt="null" />
+          <img src={Braden} alt="Braden Bell" />
           <div className="desc">
             <div className="desc-left">
               <p>
@@ -172,17 +173,17 @@ const projects = [
     desc:
       "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.",
   },
-  {
-    id: 3,
-    img: {
-      src: "null",
-    },
-    alt: "null",
-    title: "Title",
-    link: "https://www.bradenbell.tech",
-    desc:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus, nulla voluptatem ut, exercitationem officia itaque at obcaecati eligendi laudantium animi?",
-  },
+  // {
+  //   id: 3,
+  //   img: {
+  //     src: "null",
+  //   },
+  //   alt: "null",
+  //   title: "Title",
+  //   link: "https://www.bradenbell.tech",
+  //   desc:
+  //     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus, nulla voluptatem ut, exercitationem officia itaque at obcaecati eligendi laudantium animi?",
+  // },
 ];
 
 export default App;

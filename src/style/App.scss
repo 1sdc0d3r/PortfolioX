@@ -57,36 +57,9 @@
     width: 100%;
     height: 2.5em;
     z-index: 10;
-    background: rgb(170, 170, 170);
+    // background: rgb(170, 170, 170);
     background: lightblue;
     // color: rgba(255, 255, 255, 0.822);
-
-    // @include breakpoint(xxs, xs) {
-    //   display: none;
-    // }
-    // @include breakpoint(xxs) {
-    //   background: red;
-    // }
-    // @include breakpoint(xs) {
-    //   background: orange;
-    // }
-    // @include breakpoint(s) {
-    //   background: rgb(204, 193, 32);
-    // }
-    // @include breakpoint(m) {
-    //   background: green;
-    // }
-    // @include breakpoint(l) {
-    //   background: lightblue;
-    // }
-    // @include breakpoint(xl) {
-    //   background: purple;
-    //   //todo xl breakpoint not working??
-    // }
-    // @include breakpoint(xxl) {
-    //   background: white;
-    // }
-
     div {
       display: flex;
       justify-content: space-around;
@@ -128,6 +101,9 @@
   height: 100vh;
   background-image: url("../assets/images/sunset_red.jpg");
   background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  z-index: 0;
+
   h1 {
     // font-family: "Adistro";
     margin: 40vh auto 0;
@@ -138,8 +114,8 @@
 
   .bobber {
     //todo fix breaking text
-    width: 5.5vw;
-    height: 5.5vw;
+    width: 5em;
+    height: 5.2em;
     border-radius: 50%;
     background: linear-gradient(
       0deg,
@@ -150,31 +126,27 @@
       red 51%
     );
     position: absolute;
-    right: 3.5vh;
-    bottom: 3.5vh;
+    right: 3.5%;
+    bottom: 3.5%;
     cursor: pointer;
+    overflow: hidden;
 
     @include breakpoint(xxs, xs, s) {
       display: none;
     }
 
-    @include breakpoint(m) {
-      width: 7vw;
-      height: 7vw;
-    }
-
     .bobber-top {
-      border: 0.125em solid white;
-      width: 0.5vw;
-      margin: -0.25em auto;
-      z-index: -1;
+      // border: 0.2em solid white;
+      // background: white;
+      // width: 0.25em;
+      // height: 0.25em;
+      // position: absolute;
+      // top: 0;
+      // z-index: 1;
     }
     p {
-      margin-top: 1.2vw;
-      overflow: hidden;
-      @include breakpoint(m) {
-        margin-top: 1.5vw;
-      }
+      text-align: center;
+      font-size: 1.125em;
     }
   }
 }
@@ -192,6 +164,7 @@
   div {
     display: flex;
     padding: auto 10%;
+    justify-content: space-around;
 
     @include breakpoint(xxs, xs, s) {
       flex-direction: column;
@@ -199,22 +172,21 @@
     }
 
     img {
-      margin: auto;
-      border: 2px solid black;
+      margin: auto 0;
+      // margin-right: 5em;
       width: 25%;
-      height: 50vh;
       @include breakpoint(xxs, xs, s) {
-        height: 25vh;
-        width: 25vw;
+        // height: 25vh;
+        // width: 25vw;
         min-width: 170px;
       }
     }
 
     .desc {
       display: flex;
-      margin: auto;
+      margin: auto 0;
       flex-direction: column;
-      width: 40%;
+      width: 50%;
       @include breakpoint(xxs, xs, s) {
         width: 90%;
       }
@@ -278,7 +250,7 @@
       p {
         width: 80%;
         margin: 0em auto 1.1em;
-        text-align: justify;
+        text-align: center;
       }
 
       a {
