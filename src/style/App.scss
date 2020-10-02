@@ -169,6 +169,7 @@
     @include breakpoint(xxs, xs, s) {
       flex-direction: column;
       padding: auto 2%;
+      align-items: center;
     }
 
     img {
