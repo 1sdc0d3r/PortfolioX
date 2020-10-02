@@ -94,7 +94,8 @@ function App() {
           <p className="bobber-top" />
           {/* todo fix breaking here */}
           <p>
-            Drop a<br />
+            Drop a
+            <br />
             Line
           </p>
         </div>
@@ -118,7 +119,12 @@ function App() {
             </div>
             <p>
               Today is a new day.
-              <br /> I love being a source of color in a binary world!
+              <br />I love being a source of color in a binary world!
+            </p>
+            <p>
+              Languages I am proficient with: HTML, CSS, SASS, Tailwind.css,
+              JavaScript, React, Redux, Python, NodeJS, Express, Knex, SQL,
+              Postgres, Git control, and testing (Jest and Cypress).
             </p>
           </div>
         </div>
@@ -136,9 +142,14 @@ function App() {
                   className={`project${e.id}`}
                 />
                 <p>{e.desc}</p>
-                <a href={e.link} target="_blank" rel="noopener noreferrer">
-                  <button>Visit & Explore</button>
-                </a>
+                <div className="btns">
+                  <a href={e.website} target="_blank" rel="noopener noreferrer">
+                    <button>Visit Website</button>
+                  </a>
+                  <a href={e.code} target="_blank" rel="noopener noreferrer">
+                    <button>View Code</button>
+                  </a>
+                </div>
               </div>
             );
           })}
@@ -158,9 +169,10 @@ const projects = [
     },
     alt: "Starting quiz img",
     title: "Tech Sorting Hat",
-    link: "https://www.sortinghat.tech/",
+    website: "https://www.sortinghat.tech/",
+    code: "https://github.com/Lambda-School-Labs/sorting-hat-fe",
     desc:
-      "Sorting Hat is a quick quiz application that suggests students the top ranking tracks that they can further look into based on their interests and what they find most important in a job. Testing was done with Cypress and Jest.",
+      "Sorting Hat is a quick quiz that suggests the top ranking tracks in software development. As a result this allows them to research more into that specific careers based on their interests. Languages: React, TailwindCSS, Cypress, and Jest.",
   },
   {
     id: 2,
@@ -169,21 +181,11 @@ const projects = [
     },
     alt: "Conway's Game of Life",
     title: "Conway's Game",
-    link: "https://conways-game-of-life.bradenbell.vercel.app",
+    website: "https://conways-game-of-life.bradenbell.vercel.app",
+    code: "https://github.com/1sdc0d3r/Conways-Game-Of-Life",
     desc:
-      "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.",
+      "The Game of Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. I wrote this with pure JavaScript and CSS",
   },
-  // {
-  //   id: 3,
-  //   img: {
-  //     src: "null",
-  //   },
-  //   alt: "null",
-  //   title: "Title",
-  //   link: "https://www.bradenbell.tech",
-  //   desc:
-  //     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore natus, nulla voluptatem ut, exercitationem officia itaque at obcaecati eligendi laudantium animi?",
-  // },
 ];
 
 export default App;

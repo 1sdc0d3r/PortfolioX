@@ -484,11 +484,19 @@
   text-align: center;
 }
 
-.work .projects .project a {
+.work .projects .project .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
   margin: 0 auto;
 }
 
-.work .projects .project a button {
+.work .projects .project .btns a {
+  margin: 0 auto;
+}
+
+.work .projects .project .btns a button {
   font-family: "Roboto", sans-serif;
   font-size: 1.2em;
   margin: 0 auto;
@@ -532,6 +540,7 @@
           flex-direction: column;
   width: 80%;
   margin: 2em auto;
+  max-width: 60em;
 }
 
 @media (max-width: 360px) {
@@ -589,11 +598,12 @@
 
 .contact form #submit-btn {
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   background: black;
   color: white;
   border: 2px outset black;
   border-radius: 0.25em;
+  padding: 0.3em 0.5em;
 }
 
 @media (max-width: 360px) {
