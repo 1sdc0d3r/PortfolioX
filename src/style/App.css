@@ -492,8 +492,53 @@
   margin: 0 auto;
 }
 
+@media (max-width: 360px) {
+  .work .projects .project .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .work .projects .project .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 736px) {
+  .work .projects .project .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .work .projects .project .btns a {
   margin: 0 auto;
+}
+
+@media (max-width: 360px) {
+  .work .projects .project .btns a {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .work .projects .project .btns a {
+    margin-bottom: 0.5em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 736px) {
+  .work .projects .project .btns a {
+    margin-bottom: 0.5em;
+  }
 }
 
 .work .projects .project .btns a button {

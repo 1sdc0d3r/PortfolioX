@@ -256,8 +256,15 @@
         display: flex;
         width: 60%;
         margin: 0 auto;
+        @include breakpoint(xxs, xs, s) {
+          flex-direction: column;
+        }
+
         a {
           margin: 0 auto;
+          @include breakpoint(xxs, xs, s) {
+            margin-bottom: 0.5em;
+          }
 
           button {
             font-family: "Roboto", sans-serif;
