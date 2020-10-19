@@ -214,6 +214,7 @@
 }
 
 .home .bobber {
+  display: none;
   width: 5em;
   height: 5.2em;
   border-radius: 50%;

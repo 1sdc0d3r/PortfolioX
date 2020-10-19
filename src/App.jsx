@@ -175,7 +175,6 @@ const projects = [
     desc:
       "Sorting Hat is a quick quiz that suggests the top ranking tracks in software development. As a result this allows them to research more into that specific careers based on their interests. Languages: React, TailwindCSS, Cypress, and Jest.",
   },
-
   {
     id: 2,
     img: {
