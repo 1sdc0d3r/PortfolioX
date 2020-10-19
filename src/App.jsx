@@ -186,6 +186,17 @@ const projects = [
     desc:
       "The Game of Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. I wrote this with pure JavaScript and CSS",
   },
+  // {
+  //   id: 3,
+  //   img: {
+  //     sr: fish,
+  //   },
+  //   alt: "Blue Smoke Digital and Printed Media Flame",
+  //   title: "Blue Smoke Digital Media",
+  //   website: "https://bluesmokedigitalandprintedmedia.com",
+  //   code: "",
+  //   desc:""
+  // },
 ];
 
 export default App;
