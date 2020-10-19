@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import Typing from "react-typing-animation";
 import "./style/App.css";
-import Contact from "./components/Contact";
 import tech from "./assets/images/aboutTech.svg";
-import fish from "./assets/images/fish.png";
 import Braden from "./assets/images/Braden.png";
+import fish from "./assets/images/fish.png";
+import BsmFlame from "./assets/images/flame.png";
+import Contact from "./components/Contact";
 
 function App() {
   const refHome = useRef(null);
@@ -174,8 +175,21 @@ const projects = [
     desc:
       "Sorting Hat is a quick quiz that suggests the top ranking tracks in software development. As a result this allows them to research more into that specific careers based on their interests. Languages: React, TailwindCSS, Cypress, and Jest.",
   },
+
   {
     id: 2,
+    img: {
+      src: BsmFlame,
+    },
+    alt: "Blue Smoke Digital and Printed Media Flame",
+    title: "Blue Smoke Digital and Printed Media",
+    website: "https://bluesmokedigitalandprintedmedia.com",
+    code: "https://github.com/blue-smoke-media",
+    desc:
+      "I am Co-Founder and developer of Blue Smoke Media. I started developing this company while still attending Lambda School full-time. I also developed a blog alongside with it to help growing businesses be competitive and successful.",
+  },
+  {
+    id: 3,
     img: {
       src: fish,
     },
@@ -186,17 +200,6 @@ const projects = [
     desc:
       "The Game of Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. I wrote this with pure JavaScript and CSS",
   },
-  // {
-  //   id: 3,
-  //   img: {
-  //     sr: fish,
-  //   },
-  //   alt: "Blue Smoke Digital and Printed Media Flame",
-  //   title: "Blue Smoke Digital Media",
-  //   website: "https://bluesmokedigitalandprintedmedia.com",
-  //   code: "",
-  //   desc:""
-  // },
 ];
 
 export default App;
