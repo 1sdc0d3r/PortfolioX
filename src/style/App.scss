@@ -1,24 +1,11 @@
-@import "./breakpoints/BreakPoints.scss";
+@import './breakpoints/BreakPoints.scss';
+//todo style bottom
 
 .App {
   text-align: center;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   //todo backup font?
-  background-color: #c74926;
-
-  h1 {
-    font-size: 5.5em;
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    letter-spacing: 0.03em;
-    @include breakpoint(xxs, xs) {
-      font-size: 5em;
-      // @debug (5.5em/1.1em);
-    }
-    @include breakpoint(xl, xxl) {
-      font-size: 5.5 * 1.2em;
-    }
-  }
+  background-color: #4d0e00;
 
   h2 {
     font-size: 2.7em;
@@ -57,9 +44,9 @@
     width: 100%;
     height: 2.5em;
     z-index: 10;
-    // background: rgb(170, 170, 170);
-    background: lightblue;
-    // color: rgba(255, 255, 255, 0.822);
+    // background: rgb(26, 174, 223);
+    color: rgba(255, 255, 255, 0.822);
+    background: #1d1917;
     div {
       display: flex;
       justify-content: space-around;
@@ -71,7 +58,7 @@
       }
 
       p {
-        font-family: "Roboto", sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-size: 1.25em;
         @include breakpoint(xxs, xs) {
           font-size: 1.14em;
@@ -84,8 +71,8 @@
       }
 
       .active {
-        color: rgb(124, 124, 124);
-        // color: rgb(58, 147, 177);
+        color: rgb(13, 255, 0);
+        font-weight: 600;
       }
     }
   }
@@ -99,57 +86,83 @@
 
 .home {
   height: 100vh;
-  background-image: url("../assets/images/sunset_red.jpg");
-  background-size: 100% 100vh;
-  background-repeat: no-repeat;
-  z-index: 0;
+  // z-index: 0;
+  position: relative;
 
   h1 {
-    // font-family: "Adistro";
-    margin: 40vh auto 0;
-  }
-  h2 {
-    margin-top: 0.1em;
+    // font-family: 'Playfair Display', serif;
+    font-family: 'Adistro';
+    font-style: italic;
+    font-size: calc(1em + 5vw);
+    letter-spacing: 0.05em;
+    color: grey;
+    z-index: 1;
+    margin: 0;
   }
 
-  .bobber {
-    display: none;
-    //todo fix breaking text
-    width: 5em;
-    height: 5.2em;
-    border-radius: 50%;
-    background: linear-gradient(
-      0deg,
-      white,
-      white 49%,
-      rgb(255, 220, 220) 49%,
-      rgb(177, 176, 176) 51%,
-      red 51%
-    );
+  .typing-animation {
+    // margin: 0 auto;
+    // width: 100%;
+
+    .typing-script,
+    p,
+    span {
+      // margin-top: 0.1em;
+      font-size: calc(1em + 15vw);
+      // margin: 0 auto;
+      // line-height: 1.26em;
+      // line-height: 1em;
+      color: rgb(116, 36, 36);
+    }
+  }
+
+  h1,
+  .typing-animation {
     position: absolute;
-    right: 3.5%;
-    bottom: 3.5%;
-    cursor: pointer;
-    overflow: hidden;
-
-    @include breakpoint(xxs, xs, s) {
-      display: none;
-    }
-
-    .bobber-top {
-      // border: 0.2em solid white;
-      // background: white;
-      // width: 0.25em;
-      // height: 0.25em;
-      // position: absolute;
-      // top: 0;
-      // z-index: 1;
-    }
-    p {
-      text-align: center;
-      font-size: 1.125em;
-    }
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
+
+  //   .bobber {
+  //     display: none;
+  //     //todo fix breaking text
+  //     width: 5em;
+  //     height: 5.2em;
+  //     border-radius: 50%;
+  //     background: linear-gradient(
+  //       0deg,
+  //       white,
+  //       white 49%,
+  //       rgb(255, 220, 220) 49%,
+  //       rgb(177, 176, 176) 51%,
+  //       red 51%
+  //     );
+  //     position: absolute;
+  //     right: 3.5%;
+  //     bottom: 3.5%;
+  //     cursor: pointer;
+  //     overflow: hidden;
+
+  //     @include breakpoint(xxs, xs, s) {
+  //       display: none;
+  //     }
+
+  //     .bobber-top {
+  //       // border: 0.2em solid white;
+  //       // background: white;
+  //       // width: 0.25em;
+  //       // height: 0.25em;
+  //       // position: absolute;
+  //       // top: 0;
+  //       // z-index: 1;
+  //     }
+  //     p {
+  //       text-align: center;
+  //       font-size: 1.125em;
+  //     }
+  //   }
 }
 
 .about {
@@ -162,48 +175,38 @@
     margin-bottom: 3.5em;
   }
 
-  div {
+  // div {
+  // display: flex;
+  // padding: auto 10%;
+  // justify-content: space-around;
+
+  @include breakpoint(xxs, xs, s) {
+    flex-direction: column;
+    padding: auto 2%;
+    align-items: center;
+  }
+
+  .description {
     display: flex;
-    padding: auto 10%;
+    width: 90%;
+    margin: auto;
     justify-content: space-around;
-
-    @include breakpoint(xxs, xs, s) {
-      flex-direction: column;
-      padding: auto 2%;
-      align-items: center;
-    }
-
-    img {
-      margin: auto 0;
-      // margin-right: 5em;
-      width: 25%;
-      @include breakpoint(xxs, xs, s) {
-        // height: 25vh;
-        // width: 25vw;
-        min-width: 170px;
-      }
-    }
-
-    .desc {
-      display: flex;
-      margin: auto 0;
-      flex-direction: column;
+    .desc-left {
       width: 50%;
-      @include breakpoint(xxs, xs, s) {
-        width: 90%;
-      }
-      .desc-left {
-        flex-direction: column;
-        @include breakpoint(s) {
-          width: 100%;
-          flex-direction: row;
-          margin-top: 1em;
-          p {
-            width: 45%;
-            margin: 1em auto;
-          }
-        }
-      }
+      // flex-direction: column;
+      // @include breakpoint(s) {
+      //   width: 100%;
+      //   flex-direction: row;
+      //   margin-top: 1em;
+      //   p {
+      //     width: 45%;
+      //     margin: 1em auto;
+      //   }
+      // }
+      // }
+    }
+    .desc-right {
+      width: 25%;
     }
   }
 }
@@ -272,7 +275,7 @@
           }
 
           button {
-            font-family: "Roboto", sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 1.2em;
             margin: 0 auto;
             padding: 0.3em 0.5em;
@@ -335,7 +338,7 @@
       }
     }
     #submit-btn {
-      font-family: "Roboto", sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 1.2em;
       background: black;
       color: white;

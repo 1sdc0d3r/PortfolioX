@@ -2,10 +2,11 @@ import React, { useEffect, useRef } from "react";
 import Typing from "react-typing-animation";
 import "./style/App.css";
 import tech from "./assets/images/aboutTech.svg";
-import Braden from "./assets/images/Braden.png";
 import fish from "./assets/images/fish.png";
 import BsmFlame from "./assets/images/flame.png";
 import Contact from "./components/Contact";
+
+// todo add resume?
 
 function App() {
   const refHome = useRef(null);
@@ -85,49 +86,44 @@ function App() {
         </div>
       </nav>
       <section className="home">
-        <h1>Braden</h1>
-        <Typing speed={55} startDelay={700}>
-          <h2 id="sub-header">Software Engineer</h2>
-          {/* <Typing.Backspace delay={500} speed={8} count={9} /> */}
-          {/* developer, engineer */}
+        <h1>Braden Bell</h1>
+        <Typing
+          speed={55}
+          startDelay={700}
+          hideCursor
+          className="typing-animation"
+        >
+          <p className="typing-script">
+            Software
+            <br />
+            Engineer
+          </p>
+          {/* <Typing.Backspace delay={500} speed={50} count={9} />
+          {/* <Typing.Speed ms={200} /> */}
+          {/* developer, engineer (loop?) */}
         </Typing>
-        <div className="bobber" onClick={() => scrollToRef(refContact)}>
+        {/* //todo fix bobber here
+        //? put nav like water to fill up w/ bobber floating in it?*/}
+        {/* <div className="bobber" onClick={() => scrollToRef(refContact)}>
           <p className="bobber-top" />
-          {/* todo fix breaking here */}
           <p>
             Drop a
             <br />
             Line
           </p>
-        </div>
+        </div> */}
       </section>
       <section className="about">
         <h2>About</h2>
-        <div>
-          <img src={Braden} alt="Braden Bell" />
-          <div className="desc">
-            <div className="desc-left">
-              <p>
-                I am an avid fisherman with a passion to develop software. As
-                technology evolves, we must learn to evolve with it. This is
-                prominent for a successful future.
-              </p>
-              <p>
-                Change is inevitable, there will always be something that is
-                going to try to hold you back. When there is a new problem, I
-                find a new solution. This is the only way to progress.
-              </p>
-            </div>
-            <p>
-              Today is a new day.
-              <br />I love being a source of color in a binary world!
-            </p>
-            <p>
-              Languages I am proficient with: HTML, CSS, SASS, Tailwind.css,
-              JavaScript, React, Redux, Python, NodeJS, Express, Knex, SQL,
-              Postgres, Git control, and testing (Jest and Cypress).
-            </p>
-          </div>
+        <div className="description">
+          <p className="desc-left">
+            I am an avid outdoorsman with a passion to develop software.
+          </p>
+          <p className="desc-right">
+            Languages: HTML, CSS, SASS, Tailwind.css, JavaScript, React, Redux,
+            Python, NodeJS, Express, Knex, SQL, Postgres, Git control, and
+            testing (Jest and Cypress).
+          </p>
         </div>
       </section>
       <section className="work">
@@ -157,7 +153,7 @@ function App() {
         </div>
       </section>
       <Contact />
-      <span id="copy">©2020 1sdc0d3r</span>
+      <span id="copy">©2022 1sdc0d3r</span>
     </div>
   );
 }
@@ -172,8 +168,7 @@ const projects = [
     title: "Tech Sorting Hat",
     website: "https://www.sortinghat.tech/",
     code: "https://github.com/Lambda-School-Labs/sorting-hat-fe",
-    desc:
-      "Sorting Hat is a quick quiz that suggests the top ranking tracks in software development. As a result this allows them to research more into that specific careers based on their interests. Languages: React, TailwindCSS, Cypress, and Jest.",
+    desc: "Sorting Hat is a quick quiz that suggests the top ranking tracks in software development. As a result this allows them to research more into that specific careers based on their interests. Languages: React, TailwindCSS, Cypress, and Jest.",
   },
   {
     id: 2,
@@ -184,8 +179,7 @@ const projects = [
     title: "Blue Smoke Digital and Printed Media",
     website: "https://bluesmokedigitalandprintedmedia.com",
     code: "https://github.com/blue-smoke-media",
-    desc:
-      "I am Co-Founder and developer of Blue Smoke Media. I started developing this company while still attending Lambda School full-time. I also developed a blog alongside with it to help growing businesses be competitive and successful.",
+    desc: "Blue Smoke Media is a startup company that focuses on custom website designs and search engine optimization. I worked closely with a graphic designer to build out a fully responsive website with React, Node, and MySQL.",
   },
   {
     id: 3,
@@ -196,8 +190,7 @@ const projects = [
     title: "Conway's Game",
     website: "https://conways-game-of-life.bradenbell.vercel.app",
     code: "https://github.com/1sdc0d3r/Conways-Game-Of-Life",
-    desc:
-      "The Game of Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. I wrote this with pure JavaScript and CSS",
+    desc: "The Game of Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. I wrote this with pure JavaScript and CSS",
   },
 ];
 

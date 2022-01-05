@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { SocialIcon } from "react-social-icons";
-import * as emailjs from "emailjs-com";
+import React, { useState } from 'react';
+import { SocialIcon } from 'react-social-icons';
+import * as emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [data, setData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
     antiSpam: null,
   });
 
@@ -31,23 +31,23 @@ export default function Contact() {
 
     if (!data.antiSpam) {
       emailjs.send(
-        "gmail",
-        "template_SswCjIcl",
+        'gmail',
+        'template_SswCjIcl',
         templateParams,
-        "user_vhx6Zrv5irvL2nLhnctr5"
+        'user_vhx6Zrv5irvL2nLhnctr5'
       );
     }
 
-    document.querySelector(".contact span").classList.add("message-sent");
+    document.querySelector('.contact span').classList.add('message-sent');
     setTimeout(() => {
-      document.querySelector(".contact span").classList.remove("message-sent");
+      document.querySelector('.contact span').classList.remove('message-sent');
     }, 5000);
 
     setData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
       antiSpam: null,
     });
   };
@@ -56,6 +56,8 @@ export default function Contact() {
     <section className="contact clicker">
       <h2>Contact</h2>
       {/* //todo FORM ACTION */}
+      {/* //todo email response on contact form sent
+       */}
       <span>Message sent successfully</span>
       <form onSubmit={onSubmitHandler}>
         <input
@@ -73,7 +75,7 @@ export default function Contact() {
           id="anti-spam"
           value={data.antiSpam}
           onChange={onChangeHandler}
-          style={{ display: "None", position: "absolute" }}
+          style={{ display: 'None', position: 'absolute' }}
         />
 
         <input
@@ -109,6 +111,7 @@ export default function Contact() {
       </form>
 
       <div className="icons">
+        {/* //todo these are inactive accounts... */}
         <SocialIcon
           target="_blank"
           url="https://github.com/1sdc0d3r"
