@@ -7,6 +7,7 @@ import BsmFlame from "./assets/images/flame.png";
 import Contact from "./components/Contact";
 
 // todo add resume?
+//todo add hover cursor on btns
 
 function App() {
   const refHome = useRef(null);
@@ -168,7 +169,7 @@ const projects = [
     title: "Tech Sorting Hat",
     website: "https://www.sortinghat.tech/",
     code: "https://github.com/Lambda-School-Labs/sorting-hat-fe",
-    desc: "Sorting Hat is a quick quiz that suggests the top ranking tracks in software development. As a result this allows them to research more into that specific careers based on their interests. Languages: React, TailwindCSS, Cypress, and Jest.",
+    desc: "Sorting Hat is a short quiz for someone interested in web development. The results can reflect which career path may suit their interests best. To develop this application my team used the tech stack: React, TailwindCSS, Cypress, and Jest.",
   },
   {
     id: 2,
@@ -179,7 +180,7 @@ const projects = [
     title: "Blue Smoke Digital and Printed Media",
     website: "https://bluesmokedigitalandprintedmedia.com",
     code: "https://github.com/blue-smoke-media",
-    desc: "Blue Smoke Media is a startup company that focuses on custom website designs and search engine optimization. I worked closely with a graphic designer to build out a fully responsive website with React, Node, and MySQL.",
+    desc: "Blue Smoke Media is a custom website development business. I built out a fully responsive website using React, Node, and MySQL.",
   },
   {
     id: 3,
